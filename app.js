@@ -36,6 +36,18 @@ app.get('/profile', function(req, res){
     res.render('profile')
 });
 
+app.get('/loan', function(req, res){
+    res.render('loan')
+});
+
+app.get('/requestGame', function(req, res){
+    res.render('requestGame')
+});
+
+app.get('/yourLoans', function(req, res){
+    res.render('yourLoans')
+});
+
 var port = Number(process.env.PORT || 4000);
 
 app.listen(port, function() {

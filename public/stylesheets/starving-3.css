@@ -650,6 +650,11 @@ a.facebook:hover {
 	width: 150px;
 	height: 300px;
 }
+.requestsGame{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;	
+}
 
 
 .form-signin{

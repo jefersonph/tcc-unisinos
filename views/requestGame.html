@@ -1,0 +1,32 @@
+<% include partials/header.html %>
+		
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-info">
+			<div class="panel-body">
+				<div class="requestsGame">
+					<span>Selecione o usuário:</span>
+					<select id="requestGameUser" class="form-control"></select>
+					<br >
+					<span>Selecione o jogo:</span>
+					<select id="requestGame" class="form-control"></select>
+					<br >
+					<button id="requestGame" type="button" class="btn btn-primary">Solicitar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+					
+<% include partials/footer.html %>				
+
+<script type="text/javascript">
+	csj.requestGame({
+		username: csj.getUsername(),
+		id: csj.getuserId()
+	});
+</script>
+
+
+

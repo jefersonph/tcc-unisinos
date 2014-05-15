@@ -1,0 +1,38 @@
+<% include partials/header.html %>
+		
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-info">
+			<div class="panel-body">
+				<div class="requestsGame">
+					<span>Selecione o jogo:</span>
+					<select id="loanGame" class="form-control"></select>
+					<br >
+					<span>Selecione o usuário:</span>
+					<select id="loanGameUser" class="form-control"></select>
+					<br >
+					<button id="loanGamebt" type="button" class="btn btn-primary">Emprestar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+					
+<% include partials/footer.html %>				
+
+<script type="text/javascript">
+	csj.loan({
+		username: csj.getUsername(),
+		id: csj.getuserId()
+	});
+
+	$( "#loanGamebt" ).bind( "click", function() {
+		csj.makeLoan({
+			to: $( "#loanGameUser option:selected" ).text(),
+			id: $( "#loanGame option:selected" ).text()
+		});
+	});
+</script>
+
+
+
