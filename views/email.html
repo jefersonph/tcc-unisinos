@@ -1,0 +1,64 @@
+<% include partials/header.html %>
+		
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-info">
+			<div class="panel-body">
+				<div class="form-signin">
+					 <div class="form-group">
+					    <label for="inputUserName" class="col-sm-2 control-label">Para:</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="inputUserPara" placeholder="user@gmail.com">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputUserName" class="col-sm-2 control-label">Assunto:</label>
+					    <div class="col-sm-10">					      
+					      <textarea id="inputUserAssunto" class="form-control" rows="1"></textarea>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+					    <div class="col-sm-10">
+					    	<textarea id="inputSendEmail" class="form-control" rows="5"></textarea>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <div class="col-sm-offset-2 col-sm-10">
+					      <button id="submit-email" class="btn btn-success">Enviar</button>
+					      <button id="back-email" class="btn btn-danger">Voltar</button>
+					    </div>
+					  </div>
+					  <br >
+					  <p id="msgAlert" class="text-primary hide">Empréstimo efetuado.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+					
+<% include partials/footer.html %>				
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var user = csj.getParameterByName('user')
+			game = csj.getParameterByName('game');
+		
+		$('#inputUserAssunto').html('Pode me emprestar o jogo '+ game +'?')
+		$('#inputSendEmail').html('Olá '+ user +', \nPode me emprestar o jogo '+ game +'? \nBaixe o aplicativo http://bit.ly/compartilheSeuJogo \nObrigado')
+
+		$('#back-email').bind("click", function() {
+			history.back();
+		});
+	});
+	$( "#submit-email" ).bind( "click", function() {
+		csj.sendEmail({
+			to: $('#inputUserPara').val(),
+			subject: $('#inputUserAssunto').text(),
+			body: $('#inputSendEmail').text()
+		});
+	});
+</script>
+
+
+
