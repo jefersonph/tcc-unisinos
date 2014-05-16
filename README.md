@@ -1,7 +1,7 @@
-ios-pos-unisinos
+web-pos-unisinos
 ================
 
-Aplicativo iOS Pós Graduação Unisinos
+Aplicativo WEB Pós Graduação Unisinos
 
 
 ![alt tag](https://raw.github.com/jefersonph/web-pos-unisinos/master/imgs/login.png)
