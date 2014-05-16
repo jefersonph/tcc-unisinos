@@ -11,7 +11,7 @@
 					<span>Selecione o jogo:</span>
 					<select id="requestGame" class="form-control"></select>
 					<br >
-					<button id="requestGame" type="button" class="btn btn-primary">Solicitar</button>
+					<button id="requestGamebtn" type="button" class="btn btn-success">Solicitar</button>
 				</div>
 
 			</div>
@@ -22,9 +22,21 @@
 <% include partials/footer.html %>				
 
 <script type="text/javascript">
+	$(document).ready(function() {
+		$('#back').removeClass('hide');
+	});	
+	
 	csj.requestGame({
 		username: csj.getUsername(),
 		id: csj.getuserId()
+	});
+
+	$( "#requestGamebtn" ).bind( "click", function() {
+		var user = $( "#requestGameUser option:selected" ).text();
+			game = $( "#requestGame option:selected" ).text();;
+
+		window.location.href = window.location.protocol + "//" + window.location.host + "/email?user="+user+"&game="+game+"";
+
 	});
 </script>
 

@@ -15,6 +15,9 @@ app.get('/', function(req, res){
     res.redirect('/signin');
 });
 
+app.get('/email', function(req, res){
+    res.render('email');
+});
 
 app.get('/friends', function(req, res){
     res.render('friends');

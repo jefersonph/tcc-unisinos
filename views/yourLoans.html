@@ -5,6 +5,8 @@
 		<div class="panel panel-info">
 			<div class="panel-body">
 				<div id="data-result" class="list-group"></div>
+				<br >
+				<p id="msgAlert" class="text-primary hide">Empréstimo cancelado.</p>
 			</div>
 		</div>
 	</div>
@@ -13,6 +15,10 @@
 <% include partials/footer.html %>				
 
 <script type="text/javascript">
+	$(document).ready(function() {
+		$('#back').removeClass('hide');
+	});	
+
 	csj.yourLoans({
 		id: "2",
 		username: "jefersonph",

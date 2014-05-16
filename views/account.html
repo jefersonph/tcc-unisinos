@@ -18,3 +18,11 @@
 </div>
 					
 <% include partials/footer.html %>				
+
+<script type="text/javascript">
+	$( "#logout" ).bind( "click", function() {
+		localStorage.removeItem('user');
+		window.location.href = window.location.protocol + "//" + window.location.host + "/signin";
+	});
+
+</script>

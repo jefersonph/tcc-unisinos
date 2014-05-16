@@ -11,8 +11,10 @@
 					<span>Selecione o usuário:</span>
 					<select id="loanGameUser" class="form-control"></select>
 					<br >
-					<button id="loanGamebt" type="button" class="btn btn-primary">Emprestar</button>
+					<button id="loanGamebt" type="button" class="btn btn-success">Emprestar</button>
 				</div>
+				<br >
+				<p id="msgAlert" class="text-primary hide">Empréstimo efetuado.</p>
 			</div>
 		</div>
 	</div>
@@ -21,6 +23,10 @@
 <% include partials/footer.html %>				
 
 <script type="text/javascript">
+	$(document).ready(function() {
+		$('#back').removeClass('hide');
+	});	
+	
 	csj.loan({
 		username: csj.getUsername(),
 		id: csj.getuserId()

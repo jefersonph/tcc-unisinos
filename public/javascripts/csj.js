@@ -84,7 +84,7 @@ var csj = {
 	},
 	getServerAPI: function(){
 		//return "http://10.225.20.161:3000/";
-		return "http://unisinos-jph.rhcloud.com/";
+		return "http://localhost:3000/";
 	},
 	getServerXBOX: function(){
 		return "http://php-jph.trans-prev.terra.com/";
@@ -147,7 +147,7 @@ var csj = {
 		$.get( csj.getServerAPI() + "users/"+ data.id +"/lends.json", function( data ) {
 			
 			for(var i=0; i<data.length; i++ ){
-				tpl += "<a class='list-group-item' style='height: 80px; '><div> <button id='" +data[i].id+"' onclick='csj.cancelLoan(" +data[i].id+ ");' type='button' class='btn btn-primary'>Cancelar</button>  <strong class='name-friend' style='margin-top: 35px;'>"+ data[i].game_id +"</strong> <span class='points-friend'>Para: "+ data[i].to +"</span></div><div class='clearfix'></div></a>";
+				tpl += "<a class='list-group-item' style='height: 80px; '><div> <button id='" +data[i].id+"' onclick='csj.cancelLoan(" +data[i].id+ ");' type='button' class='btn btn-danger'>Cancelar</button>  <strong class='name-friend' style='margin-top: 35px;'>"+ data[i].game_id +"</strong> <span class='points-friend'>Para: "+ data[i].to +"</span></div><div class='clearfix'></div></a>";
 			}
 
 			$('#data-result').html(tpl);
@@ -160,6 +160,7 @@ var csj = {
 			url: csj.getServerAPI() + "users/"+ csj.getuserId() +"/lends/"+id+"/delete.json",
 			success: function(data){
 				$('#' + id).parent().parent().remove();
+				$('#msgAlert').removeClass('hide');
 			},
 			error: function(data){
 				console.log("ERRO cancelLoan");
@@ -173,11 +174,21 @@ var csj = {
 			url: csj.getServerAPI() + "users/"+ csj.getuserId() +"/lends.json",
 			data: "lend[to]="+data.to+"&lend[game_id]="+data.id+"",
 			success: function(data){
-				console.log(data)
+				$('#msgAlert').removeClass('hide');
 			},
 			error: function(data){
 				console.log("ERRO makeLoan");
 			}
 		});
+	},
+	getParameterByName: function (name) {
+	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	        results = regex.exec(location.search);
+	    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	},
+	sendEmail: function(data){
+		console.log(data);
+		$('#msgAlert').removeClass('hide');
 	}
 }		
