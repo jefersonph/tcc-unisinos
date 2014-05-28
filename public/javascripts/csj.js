@@ -43,7 +43,7 @@ var csj = {
 	loadFriends: function(data) {
 		var tpl = "";
 
-		$.get( csj.getServerXBOX() + "unisinos/friends/"+ data.username +".json", function( data ) {
+		$.get( csj.getServerXBOX() + "friends/"+ data.username.replace(" ", "%20"), function( data ) {
 			friends = data.Friends;
 
 			for(var i=0; i<friends.length; i++ ){
@@ -59,7 +59,7 @@ var csj = {
 	loadGames: function(data) {
 		var tpl = "";
 
-		$.get( csj.getServerXBOX() + "unisinos/games/"+ data.username +".json", function( data ) {
+		$.get( csj.getServerXBOX() + "games/"+ data.username.replace(" ", "%20"), function( data ) {
 			games = data.Games;
 
 			for(var i=0; i<games.length; i++ ){
@@ -74,7 +74,7 @@ var csj = {
 	*/
 	loadProfile: function(data){
 		var tpl = "";
-		$.get( csj.getServerXBOX() + "unisinos/profile/"+ data.username +".json", function( data ) {
+		$.get( csj.getServerXBOX() + "profile/"+ data.username.replace(" ", "%20"), function( data ) {
 
 			tpl = "<div class='info-profile pull-left'><strong class='profile-name'>"+ data.Player.Gamertag +"</strong><br><span class='profile-score'>Gamerscore: </span><span>"+ data.Player.Gamerscore +"</span><br><span class='profile-reputation'>Reputation: </span><span>"+ data.Player.Reputation +"</span><br><div class='profile-recents'><strong>Atividades Recentes</strong><ul><li>"+data.RecentGames[0].Name +"</li><li>"+ data.RecentGames[1].Name +"</li><li>"+ data.RecentGames[2].Name +"</li></ul>	</div>	</div><div class='img-profile pull-right'><img src='"+ data.Player.Avatar.Body +"'></div>";
 
@@ -84,13 +84,14 @@ var csj = {
 	},
 	getServerAPI: function(){
 		//return "http://10.225.20.161:3000/";
-		return "http://localhost:3000/";
+		return "http://pos-unisinos-ws.herokuapp.com/";
 	},
 	getServerXBOX: function(){
-		return "http://php-jph.trans-prev.terra.com/";
+		//return "http://php-jph.trans-prev.terra.com/";
+		return "https://xboxapi.com/v1/"
 	},
 	requestGame: function(data){
-		$.get( csj.getServerXBOX() + "unisinos/friends/"+ data.username +".json", function( data ) {
+		$.get( csj.getServerXBOX() + "friends/"+ data.username.replace(" ", "%20"), function( data ) {
 			friends = data.Friends;
 			for(var i=0; i<friends.length; i++ ){
 				$('#requestGameUser').append(new Option(friends[i].GamerTag,  friends[i].GamerTag));
@@ -110,7 +111,7 @@ var csj = {
 		
 	},
 	requestGameChange: function(data){
-		$.get( csj.getServerXBOX() + "unisinos/games/"+ data.username.replace(" ", "") +".json", function( data ) {
+		$.get( csj.getServerXBOX() + "games/"+ data.username.replace(" ", "%20"), function( data ) {
 			games = data.Games;
 			$('#requestGame option').remove();
 
@@ -121,7 +122,7 @@ var csj = {
 		});		
 	},
 	loan: function(data){
-		$.get( csj.getServerXBOX() + "unisinos/games/"+ data.username.replace(" ", "") +".json", function( data ) {
+		$.get( csj.getServerXBOX() + "games/"+ data.username.replace(" ", "%20"), function( data ) {
 			games = data.Games;
 
 			for(var i=0; i<games.length; i++ ){
@@ -130,7 +131,7 @@ var csj = {
 			
 		});		
 
-		$.get( csj.getServerXBOX() + "unisinos/friends/"+ data.username.replace(" ", "") +".json", function( data ) {
+		$.get( csj.getServerXBOX() + "friends/"+ data.username.replace(" ", "%20"), function( data ) {
 			friends = data.Friends;
 
 			for(var i=0; i<friends.length; i++ ){
