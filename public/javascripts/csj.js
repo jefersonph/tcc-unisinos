@@ -23,7 +23,12 @@ var csj = {
 	},
 	getItemStorage: function(key){
 		var storage = JSON.parse(localStorage.getItem(key));
-		return JSON.parse(storage.responseText);
+
+		if(storage.responseText){
+			return JSON.parse(storage.responseText);
+		}else{
+			return storage;	
+		}		
 	},
 	getUsername: function(){
 		var user = csj.getItemStorage("user");
