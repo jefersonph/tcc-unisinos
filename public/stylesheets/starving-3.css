@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Asap', sans-serif;font-weight: 400;}
 h1 {font-size: 24px; padding: 0;}
 h2 {font-size: 18px; color: #2070AA;}
 h4 {font-size: 16px;}
-p {font-size: 13px;}
+p {font-size: 14px;}
 address {font-size: 12px;}
 strong {font-family: 'Asap', sans-serif;font-weight: 700;}
 .breathe {padding: 30px;}
@@ -622,6 +622,11 @@ a.facebook:hover {
 	padding: 5px;
 	border: 1px solid #cccccc;
 }
+/* tcc */
+
+.subitem{
+	padding-left: 25px;
+}
 
 /* Friend */
 .profile-page{
@@ -837,3 +842,4 @@ footer {margin: 50px 0;}
 		display: none;
 	}
 }
+
