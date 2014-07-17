@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+ 	 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+ 	 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<title>teste</title>
+</head>
+<body>
+<div id="map" style="height: 680px;"></div>
+
+<script type="text/javascript">
+	var map;
+
+	if (navigator.geolocation) {
+	  var timeoutVal = 10 * 1000 * 1000;
+	  navigator.geolocation.getCurrentPosition(
+	    displayPosition, 
+	    displayError,
+	    { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+	  );
+	}
+	else {
+	  console.log("Geolocation is not supported by this browser");
+	}
+
+	function displayPosition(position) {
+		map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
+	  	console.log("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
+
+	  	L.tileLayer('http://{s}.tiles.mapbox.com/v3/jefersonph.iph25o9f/{z}/{x}/{y}.png', {
+		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		    maxZoom: 18
+		}).addTo(map);
+
+		//var marker = L.marker([51.5, -0.09]).addTo(map);
+		//marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+		getPlaces();
+	}
+
+	function displayError(error) {
+	  var errors = { 
+	    1: 'Permission denied',
+	    2: 'Position unavailable',
+	    3: 'Request timeout'
+	  };
+	  console.log("Error: " + errors[error.code]);
+	}
+
+	function getPlaces(){
+		$.get( "https://maps.googleapis.com/maps/api/place/search/json?location=-30.0312216,-51.1658397&radius=4754796&types=hospital&sensor=true&key=AIzaSyBpSarbTlQGBmm83KIsL0ZvPokw3SCGCWg", function( data ) {
+			console.log(data);
+		});	
+		
+	}
+
+</script>
+</body>
+</html>
