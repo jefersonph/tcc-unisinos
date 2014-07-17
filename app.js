@@ -39,6 +39,10 @@ app.get('/estados', function(req, res){
     res.render('estados');
 });
 
+app.get('/mapa', function(req, res){
+    res.render('mapa');
+});
+
 app.get('/estado', function(req, res){
     res.render('estados/estado');
 });

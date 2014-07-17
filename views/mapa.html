@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>Place searches</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-        html, body, #map-canvas {
-            height: 100%;
-            margin: 0px;
-            padding: 0px
-        }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
-    <script>
+<% include partials/header.html %>
+
+<div id="map-canvas"></div>
+                    
+<% include partials/footer.html %>  
+
+<script type="text/javascript">
         var map;
         var infowindow;
 
         google.maps.event.addDomListener(window, 'load', initialize);
-        
         function initialize() {    
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
@@ -32,7 +23,7 @@
                     var request = {
                         location: location,
                         radius: 5000,
-                        types: ['dentist']
+                        types: [tcc.getParameterByName("p")]
                     };
                     infowindow = new google.maps.InfoWindow();
                     var service = new google.maps.places.PlacesService(map);
@@ -61,14 +52,8 @@
             });
 
             google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent("<div><strong>"+place.name+"</strong><br><br><span>" + place.vicinity + "</span></div><br>");          
+                infowindow.setContent("<div class='mapsInfo'><strong>"+place.name+"</strong><br><br><span>" + place.vicinity + "</span></div><br>");          
                 infowindow.open(map, this);
             });
         }
-     
-    </script>
-    </head>
-    <body>
-        <div id="map-canvas"></div>
-    </body>
-</html>
+</script>       

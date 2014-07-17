@@ -624,8 +624,20 @@ a.facebook:hover {
 }
 /* tcc */
 
+.mapsInfo{
+	color: #333333;
+}
 .subitem{
 	padding-left: 25px;
+}
+
+#map-canvas{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 300px;
+    min-height: 550px;
 }
 
 /* Friend */
