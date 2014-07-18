@@ -34,6 +34,19 @@ app.get('/cuidados', function(req, res){
 app.get('/consulados', function(req, res){
     res.render('consulados');
 });
+
+app.get('/estados', function(req, res){
+    res.render('estados');
+});
+
+app.get('/mapa', function(req, res){
+    res.render('mapa');
+});
+
+app.get('/estado', function(req, res){
+    res.render('estados/estado');
+});
+
 var port = Number(process.env.PORT || 4000);
 
 app.listen(port, function() {

@@ -628,6 +628,22 @@ a.facebook:hover {
 	padding-left: 25px;
 }
 
+.mapsInfo{
+	color: #333333;
+}
+.subitem{
+	padding-left: 25px;
+}
+
+#map-canvas{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 300px;
+    min-height: 550px;
+}
+
 /* Friend */
 .profile-page{
 	margin-left: 10px;	
