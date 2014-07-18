@@ -12,45 +12,28 @@ app.set('view engine', 'html');
 
 
 app.get('/', function(req, res){
-    res.redirect('/signin');
+    res.render('index');
 });
 
-app.get('/email', function(req, res){
-    res.render('email');
+app.get('/telefones', function(req, res){
+    res.render('telefones');
 });
 
-app.get('/friends', function(req, res){
-    res.render('friends');
+app.get('/vacinas', function(req, res){
+    res.render('vacinas');
 });
 
-app.get('/games', function(req, res){
-    res.render('games');
+app.get('/prevencao', function(req, res){
+    res.render('prevencao');
 });
 
-app.get('/account', function(req, res){            
-    res.render('account');
+app.get('/cuidados', function(req, res){
+    res.render('cuidados');
 });
 
-app.get('/signin', function(req, res){
-    res.render('signin')
+app.get('/consulados', function(req, res){
+    res.render('consulados');
 });
-
-app.get('/profile', function(req, res){
-    res.render('profile')
-});
-
-app.get('/loan', function(req, res){
-    res.render('loan')
-});
-
-app.get('/requestGame', function(req, res){
-    res.render('requestGame')
-});
-
-app.get('/yourLoans', function(req, res){
-    res.render('yourLoans')
-});
-
 var port = Number(process.env.PORT || 4000);
 
 app.listen(port, function() {
