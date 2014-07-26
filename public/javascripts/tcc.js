@@ -72,7 +72,7 @@ var tcc = {
 
 	},
 	getServerAPI: function () {
-		return "http://localhost:3000/";
+		return "http://tcc-pos-unisinos.herokuapp.com/";
 	},
 	setUserData: function (data){
 		localStorage.setItem("user", 1);
