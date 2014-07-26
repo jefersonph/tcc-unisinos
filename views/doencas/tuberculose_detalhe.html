@@ -4,8 +4,9 @@
 	<div class="col-xs-12">
 		<div class="panel panel-info">
 			<div class="panel-body">
-				<a href="aids_detalhe?p=1"><button type="button" class="btn btn-primary btn-lg btn-block">Taxa de Incidência</button></a>
-				<a href="aids_detalhe?p=2"><button type="button" class="btn btn-primary btn-lg btn-block">Incidência</button></a> 				
+				
+	
+
 			</div>
 		</div>
 	</div>
@@ -16,6 +17,13 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#back').removeClass('hide');
-		$('#btn-back').attr('href','doencas');
+		var estado = tcc.getParameterByName("p");	
+
+		$('#btn-back').attr('href','doencas?p='+estado);
+
+		tcc.getDiseaseJson({
+			disease: "tuberculose",
+			estado: estado
+		});
 	});	
 </script>	

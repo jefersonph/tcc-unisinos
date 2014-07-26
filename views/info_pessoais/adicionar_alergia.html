@@ -13,10 +13,12 @@
 				  </div>		
 				  <div class="form-group">
 				    <div class="col-sm-offset-2 col-sm-10">
-				      <button type="submit" class="btn btn-primary">Salvar</button>
+				      <div id="submit-login" type="submit" class="btn btn-primary">Salvar</div>
 				    </div>
 				  </div>
 				</form>
+				<div id="msg-ok" class="alert alert-success hide">Dados salvos com sucesso.</div>
+				<div id="msg-nok"class="alert alert-danger hide">Ocorreu um erro, tente novamente.</div>
 			</div>								
 		</div>
 	</div>
@@ -28,5 +30,9 @@
 	$(document).ready(function() {
 		$('#back').removeClass('hide');
 		$('#btn-back').attr('href','info_alergias');
+
+		$( "#submit-login" ).bind( "click", function() {
+			tcc.createAllergy($('#alergia').val());
+		});	
 	});	
 </script>	

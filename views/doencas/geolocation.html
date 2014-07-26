@@ -1,0 +1,62 @@
+<% include ../partials/header.html %>
+		
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-info">
+			<div class="panel-body">
+				<a id="geoloc-a" href="" class="hide"><button id="geoloc-b" type="button" class="btn btn-primary btn-lg btn-block"></button></a>
+				<a href="doencas_estados" class="hide"><button type="button" class="btn btn-primary btn-lg btn-block">Ver todos estados</button></a> 				
+			</div>
+		</div>
+	</div>
+</div>
+					
+<% include ../partials/footer.html %>	
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#back').removeClass('hide');
+		$('#btn-back').attr('href','index');
+
+		 if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+
+            	var dt = "";
+            	
+            	$.ajax({
+					type: "GET",
+					url: 'http://nominatim.openstreetmap.org/reverse?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&zoom=10&addressdetails=1&format=json',
+					success: function(data){
+						console.log(data);
+
+						var estados = tcc.listaEstados();
+
+						if ($.inArray( data.address.state, estados) != -1){
+
+							$('#geoloc-a').attr('href','doencas?p='+ data.address.state.toLowerCase())
+							$('#geoloc-b').html("Definido por Geolocalização: "+ data.address.state);
+
+
+							var a = $('.panel-body a');
+							for(var i=0; i < a.length; i++){								
+								$(a[i]).removeClass('hide');
+							}
+
+						}else{
+							console.log("estado nao identificado")
+						}
+
+					},
+					error: function(data){
+						console.log("erro openstreetmap");
+					}
+				});
+				
+            });
+        }
+        else {
+            console.log("Geolocation is not supported by this browser");
+        } 
+
+	});	
+</script>	

@@ -1,0 +1,34 @@
+<% include ../partials/header.html %>
+		
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-info">
+			<div class="panel-body">
+				<a href="dengue_detalhe" class="hide"><button type="button" class="btn btn-primary btn-lg btn-block">Dengue</button></a> 				
+				<a href="aids_detalhe" class="hide"><button type="button" class="btn btn-primary btn-lg btn-block">AIDS</button></a>
+				<a href="tuberculose_detalhe" class="hide"><button type="button" class="btn btn-primary btn-lg btn-block">Tuberculose</button></a> 
+				<a href="leptospirose_detalhe" class="hide"><button type="button" class="btn btn-primary btn-lg btn-block">Leptospirose</button></a> 
+			</div>
+		</div>
+	</div>
+</div>
+					
+<% include ../partials/footer.html %>	
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#back').removeClass('hide');
+		$('#btn-back').attr('href','doencas_estados');
+
+		var estado = tcc.getParameterByName("p");	
+
+		var a = $('.panel-body a');
+
+		for(var i=0; i < a.length; i++){
+			var old = $(a[i]).attr('href');
+			$(a[i]).attr('href', old + "?p=" + estado);
+			$(a[i]).removeClass('hide');
+		}
+
+	});	
+</script>	

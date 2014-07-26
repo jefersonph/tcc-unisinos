@@ -1,0 +1,640 @@
+{
+        "rs": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 41.39
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 30.91
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 93.67
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Porto Alegre",
+                    "value" : 69.53
+                }
+            ]
+        },
+        "pr": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 18.64
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 30.91
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 26.00
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Curitiba",
+                    "value" : 24.73
+                },
+                {
+                    "name" : "Região Metropolitana de Londrina",
+                    "value" : 17.62
+                },
+                {
+                    "name" : "Região Metropolitana de Maringá",
+                    "value" : 20.99
+                }
+            ]
+        },
+        "sc": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 33.54
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 30.91
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 57.02
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name": "Região Metropolitana de Tubarão",
+                    "value" : 44.93
+                },    
+                {
+                    "name": "Expansão de Tubarão",
+                    "value" : 25.61
+                },
+                {                    
+                    "name": "Região Metropolitana de Florianópolis",
+                    "value" : 54.85
+                },
+                {    
+                    "name": "Expansão de Florianópolis",
+                    "value" : 15.78
+                },
+                {
+                    "name": "Região Metropolitana do Vale do Itajaí",
+                    "value" : 32.64
+                },
+                { 
+                    "name": "Expansão do Vale do Itajaí",
+                    "value" : 30.93
+                },
+                {
+                    "name": "Região Metropolitana do N/NE Catarinense",
+                    "value" : 41.58
+                }, 
+                {
+                    "name": "Expansão do N/NE Catarinense",
+                    "value" : 25.28
+                },
+                {
+                    "name": "Região Metropolitana da Foz do Itajaí",
+                    "value" : 72.76
+                },
+                {
+                    "name": "Expansão da Foz do Itajaí",
+                    "value" : 38.44
+                },
+                {
+                    "name": "Região Metropolitana Carbonífera",
+                    "value" : 45.02
+                },
+                { 
+                    "name": "Expansão da Carbonífera",
+                    "value" : 31.23
+                }  
+            ]
+        },
+        "ro": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 22.39
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 48.79
+                }
+            ],
+            "Regiao_metropolitana": [                
+            ]
+        },
+        "ac": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 9.23
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 15.79
+                }
+            ],
+            "Regiao_metropolitana": [
+            ]
+        },
+        "am": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 29.24
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 46.73
+                }
+            ],
+            "Regiao_metropolitana": [
+            ]
+        },
+        "rr": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 27.26
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 36.71
+                }
+            ],
+            "Regiao_metropolitana": [
+            ]
+        },
+        "pa": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 18.98
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 38.14
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Belém",
+                    "value" : 35.20
+                }
+            ]
+        },
+        "ap": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 20.18
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 24.06
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Macapá",
+                    "value" : 22.31
+                }
+            ]
+        },
+        "to": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 13.90
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 24.79
+                }
+            ],
+            "Regiao_metropolitana": [
+            ]
+        },
+        "ma": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 16.65
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 14.79
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 42.52
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de São Luís",
+                    "value" : 38.06
+                }
+            ]
+        },
+        "pi": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 14.46
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 14.79
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 31.56
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Teresina",
+                    "value" : 27.53
+                }
+            ]
+        },
+        "ce": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 14.07
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 14.79
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 26.36
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Fortaleza",
+                    "value" : 22.89
+                }
+            ]
+        },
+        "pb": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 11.14
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 14.79
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 20.34
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de João Pessoa",
+                    "value" : 19.79
+                }
+            ]
+        },
+        "pe": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 20.93
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 14.79
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 39.03
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Recife",
+                    "value" : 34.56
+                }
+            ]
+        },        
+        "al": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 12.67
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 14.79
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 26.85
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Maceió",
+                    "value" : 23.78
+                }
+            ]
+        },     
+        "se": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 12.18
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 14.79
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 20.59
+                }
+            ],
+            "Regiao_metropolitana": [
+            ]
+        },     
+        "ba": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 12.88
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 31.65
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Salvador",
+                    "value" : 28.54
+                },
+                {
+                    "name" : "RIDE de Petrolina/Juazeiro",
+                    "value" : 14.05
+                }                
+            ]
+        },   
+        "mg": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 12.94
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.10
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 27.17
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name"  : "Região Metropolitana de Belo Horizonte",
+                    "value" : 21.56
+                },
+                {
+                    "name"  : "Colar de Belo Horizonte",
+                    "value" : 12.56
+                },   
+                {
+                    "name"  : "Região Metropolitana do Vale do Aço",
+                    "value" : 11.53
+                },
+                {
+                    "name"  : "Colar do Vale do Aço",
+                    "value" : 5.50
+                }
+            ]
+        },  
+        "es": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 23.17
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.10
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 39.92
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Vitória",
+                    "value" : 32.81
+                }             
+            ]
+        },   
+        "rj": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 28.70
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.10
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 37.78
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana do Rio de Janeiro",
+                    "value" : 32.74
+                }             
+            ]
+        },  
+        "sp": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 19.91
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.10
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 25.81
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de São Paulo",
+                    "value" : 21.53
+                },            
+                {
+                    "name" : "Região Metropolitana da Baixada Santista",
+                    "value" : 25.58
+                },
+                {
+                    "name" : "Região Metropolitana de Campinas",
+                    "value" : 19.64
+                }    
+            ]
+        },  
+        "ms": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 25.27
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 19.54
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 33.28
+                }
+            ],
+            "Regiao_metropolitana": [           
+            ]
+        },  
+        "mt": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 19.39
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 19.54
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 28.68
+                }
+            ],
+            "Regiao_metropolitana": [           
+            ]
+        },  
+        "go": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 16.54
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 19.54
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 27.22
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Goiânia",
+                    "value" : 23.64
+                }             
+            ]
+        },  
+        "df": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 21.26
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 19.54
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 21.26
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Entorno de Brasília",
+                    "value" : 18.13
+                }             
+            ]
+        },          
+        "rn": {
+            "dados" : [
+                {   
+                    "name"  : "uf",
+                    "value" : 12.61
+                },
+                {
+                    "name"  : "regiao",
+                    "value" : 20.96
+                },
+                {
+                    "name"  : "capital",
+                    "value" : 20.55
+                }
+            ],
+            "Regiao_metropolitana": [
+                {
+                    "name" : "Região Metropolitana de Natal",
+                    "value" : 17.90
+                }             
+            ]
+        }  
+}

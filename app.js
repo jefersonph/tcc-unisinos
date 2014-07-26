@@ -48,7 +48,7 @@ app.get('/informacoes', function(req, res){
 });
 
 app.get('/doencas', function(req, res){
-    res.render('doencas');
+    res.render('doencas/doencas');
 });
 
 app.get('/info_pessoais', function(req, res){
@@ -83,6 +83,9 @@ app.get('/estado', function(req, res){
     res.render('estados/estado');
 });
 
+app.get('/doencas_estados', function(req, res){
+    res.render('doencas/estados');
+});
 
 app.get('/aids', function(req, res){
     res.render('doencas/aids');
@@ -104,6 +107,21 @@ app.get('/aids_detalhe', function(req, res){
     res.render('doencas/aids_detalhe');
 });
 
+app.get('/dengue_detalhe', function(req, res){
+    res.render('doencas/dengue_detalhe');
+});
+
+app.get('/tuberculose_detalhe', function(req, res){
+    res.render('doencas/tuberculose_detalhe');
+});
+
+app.get('/leptospirose_detalhe', function(req, res){
+    res.render('doencas/leptospirose_detalhe');
+});
+
+app.get('/geoloc', function(req, res){
+    res.render('doencas/geolocation');
+});
 var port = Number(process.env.PORT || 4000);
 
 app.listen(port, function() {
