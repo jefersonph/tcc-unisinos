@@ -15,6 +15,18 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+app.get('/cuidados_saude', function(req, res){
+    res.render('cuidados_saude');
+});
+
+app.get('/info_gerais', function(req, res){
+    res.render('info_gerais');
+});
+
+app.get('/locais', function(req, res){
+    res.render('locais');
+});
+
 app.get('/telefones', function(req, res){
     res.render('telefones');
 });
@@ -122,6 +134,7 @@ app.get('/leptospirose_detalhe', function(req, res){
 app.get('/geoloc', function(req, res){
     res.render('doencas/geolocation');
 });
+
 var port = Number(process.env.PORT || 4000);
 
 app.listen(port, function() {
