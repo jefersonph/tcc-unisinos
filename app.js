@@ -12,7 +12,11 @@ app.set('view engine', 'html');
 
 
 app.get('/', function(req, res){
-    res.render('index');
+    res.render('cuidados_saude');
+});
+
+app.get('/index', function(req, res){
+    res.render('cuidados_saude');
 });
 
 app.get('/cuidados_saude', function(req, res){
